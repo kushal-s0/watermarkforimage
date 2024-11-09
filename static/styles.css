@@ -1,0 +1,99 @@
+/* Root colors for easy customization */
+:root {
+    --primary-color: #5a67d8;    /* Indigo-blue for main elements */
+    --secondary-color: #2d3748;  /* Dark gray for text contrast */
+    --accent-color: #38b2ac;     /* Teal for accents */
+    --background-color-1: #a0e7e5; /* Aqua start color */
+    --background-color-2: #89c9d8; /* Soft teal */
+    --background-color-3: #4a90e2; /* Light blue */
+    --container-bg-color: #ffffff; /* White for form container */
+    --text-color: #333;            /* Standard text color */
+}
+
+/* Animated gradient background */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, var(--background-color-1), var(--background-color-2), var(--background-color-3));
+    background-size: 200% 200%;
+    animation: gradientAnimation 12s ease infinite;
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container styling with shadow and rounded corners */
+.container {
+    text-align: center;
+    background-color: var(--container-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    color: var(--text-color);
+}
+
+/* Title styling */
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Input fields */
+input[type="file"],
+input[type="text"] {
+    width: 90%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+
+/* Input focus effect */
+input[type="file"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Button styling */
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Form labels */
+label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin: 12px 0 6px;
+    color: var(--secondary-color);
+}

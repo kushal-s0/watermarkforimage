@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Watermarking</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Upload Image to Add Watermark</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <label for="image">Choose an image:</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+      
+      <label for="watermark_text">Watermark Text:</label>
+      <input type="text" id="watermark_text" name="watermark_text" required>
+      
+      <button type="submit">Upload and Add Watermark</button>
+    </form>
+  </div>
+</body>
+</html>
